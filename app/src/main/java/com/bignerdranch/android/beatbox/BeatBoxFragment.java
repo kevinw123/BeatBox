@@ -22,7 +22,9 @@ public class BeatBoxFragment extends Fragment {
     @Override
     public void  onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
+        setRetainInstance(true);
         mBeatBox = new BeatBox(getActivity());
+
     }
 
     @Override
@@ -40,8 +42,10 @@ public class BeatBoxFragment extends Fragment {
         super.onDestroy();
         mBeatBox.release();
     }
+
     private class SoundHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
         private Button mButton;
+        private Sound mSound;
 
         public SoundHolder(LayoutInflater inflater, ViewGroup container){
             super(inflater.inflate(R.layout.list_item_sound, container, false));

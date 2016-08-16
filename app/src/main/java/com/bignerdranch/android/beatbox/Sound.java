@@ -28,7 +28,7 @@ public class Sound {
     }
 
     public void setSoundId(Integer soundId) {
-        this.mSoundId = soundId;
+        mSoundId = soundId;
     }
 
 }
